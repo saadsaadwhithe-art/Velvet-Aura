@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velvet Aura | العطور الفاخرة والنخبة</title>
+    <title>Velvet Aura | عطور فاخرة</title>
     <style>
         :root {
             --bg-color: #08080a;
             --card-bg: #121317;
             --accent-gold: #c5a059;
             --text-main: #f1f1f1;
-            --text-muted: #a0a0a0;
+            --text-muted: #b5b5b5;
         }
         * {
             margin: 0;
@@ -21,245 +21,233 @@
         body {
             background-color: var(--bg-color);
             color: var(--text-main);
-            overflow-x: hidden;
+            line-height: 1.6;
         }
         header {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(8,8,10,1)), url('https://images.unsplash.com/photo-1615397349754-cfa2066a298e?q=80&w=1600&auto=format&fit=crop') no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background: linear-gradient(to bottom, #040405, #121317);
+            padding: 60px 20px;
             text-align: center;
-            padding: 20px;
-            border-bottom: 2px solid var(--accent-gold);
+            border-bottom: 1px solid #222;
         }
         header h1 {
             color: var(--accent-gold);
-            font-size: 4rem;
-            letter-spacing: 5px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
         }
         header p {
-            font-size: 1.4rem;
             color: var(--text-muted);
-            font-style: italic;
-            max-width: 700px;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
         }
         .container {
-            max-width: 1300px;
-            margin: 60px auto;
+            max-width: 1200px;
+            margin: 50px auto;
             padding: 0 20px;
-        }
-        .section-title {
-            text-align: center;
-            color: var(--accent-gold);
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            letter-spacing: 2px;
-            border-bottom: 1px solid #222;
-            padding-bottom: 15px;
         }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 35px;
+            gap: 30px;
         }
         .card {
-            background-color: var(--card-bg);
+            background: var(--card-bg);
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid #222;
-            transition: all 0.4s ease;
+            transition: 0.4s;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
         .card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-8px);
             border-color: var(--accent-gold);
-            box-shadow: 0 15px 40px rgba(197, 160, 89, 0.2);
+            box-shadow: 0 15px 35px rgba(197, 160, 89, 0.2);
         }
-        .img-box {
-            width: 100%;
-            height: 320px;
+        .card-img {
+            height: 300px;
             background: #000;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 20px;
-            overflow: hidden;
         }
-        .card img {
+        .card-img img {
             max-height: 100%;
             max-width: 100%;
             object-fit: contain;
-            transition: transform 0.5s ease;
-        }
-        .card:hover img {
-            transform: scale(1.1);
         }
         .card-content {
             padding: 25px;
-            text-align: center;
-            flex-grow: 1;
             display: flex;
             flex-direction: column;
+            flex-grow: 1;
             justify-content: space-between;
         }
         .card-title {
-            font-size: 1.3rem;
-            color: #fff;
-            margin-bottom: 15px;
-            font-weight: bold;
-        }
-        .price-tag {
             color: var(--accent-gold);
-            font-size: 1.35rem;
-            font-weight: bold;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        .card-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
             margin-bottom: 20px;
         }
-        .btn {
-            display: inline-block;
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+        }
+        .price {
+            color: var(--accent-gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        .details-btn {
             background: transparent;
             color: var(--accent-gold);
-            border: 2px solid var(--accent-gold);
-            padding: 12px 25px;
-            border-radius: 30px;
+            border: 1px solid var(--accent-gold);
+            padding: 8px 20px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s ease;
-            letter-spacing: 1px;
+            transition: 0.3s;
         }
-        .btn:hover {
+        .details-btn:hover {
             background: var(--accent-gold);
             color: #000;
         }
         footer {
-            background-color: #040405;
             text-align: center;
-            padding: 50px 20px;
-            border-top: 1px solid #222;
+            padding: 40px;
+            background: #040405;
+            color: #777;
             margin-top: 80px;
-            color: var(--text-muted);
-        }
-        footer h3 {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        footer p {
-            margin: 8px 0;
-            font-size: 1rem;
+            border-top: 1px solid #222;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Velvet Aura</h1>
-        <p>اكتشف عالم الفخامة المطلقة مع أرقى العطور العالمية المصممة خصيصاً للنخبة</p>
+        <h1>VELVET AURA</h1>
+        <p>اكتشف عالم العطور الفاخرة والبصمة الملكية المميزة</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">المجموعة الملكية الحصرية</h2>
-        
         <div class="grid">
-            <!-- 1. ديور سوفاج -->
+
+            <!-- عطر 1: Emporio Armani -->
             <div class="card">
-                <div class="img-box">
-                    <img src="Connor cobalt.jpg" alt="Dior Sauvage Eau Forte">
+                <div class="card-img">
+                    <img src="977562662870170294.jpg" alt="Emporio Armani Stronger With You Intensely">
                 </div>
                 <div class="card-content">
                     <div>
-                        <div class="card-title">Dior Sauvage Eau Forte</div>
-                        <div class="price-tag">1,400 - 1,800 درهم</div>
+                        <h2 class="card-title">Emporio Armani Stronger With You Intensely</h2>
+                        <p class="card-desc">عطر الجاذبية الدافئة والحضور الآسر بلمسات شرقية فاخرة.</p>
                     </div>
-                    <a href="sauvage.html" class="btn">استكشف التفاصيل والقصة</a>
+                    <div class="card-footer">
+                        <span class="price">35 درهم</span>
+                        <a href="armani.html" class="details-btn">التفاصيل</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- 2. أرماني سترونغر بايو -->
+            <!-- عطر 2: YSL Le Parfum -->
             <div class="card">
-                <div class="img-box">
-                    <img src="977562662870170294.jpg" alt="Stronger With You Intensely">
-                </div>
-                <div class="card-content">
-                    <div>
-                        <div class="card-title">Emporio Armani Stronger With You Intensely</div>
-                        <div class="price-tag">1,100 - 1,400 درهم</div>
-                    </div>
-                    <a href="armani.html" class="btn">استكشف التفاصيل والقصة</a>
-                </div>
-            </div>
-
-            <!-- 3. إيف سان لوران -->
-            <div class="card">
-                <div class="img-box">
+                <div class="card-img">
                     <img src="1094726622034632618.jpg" alt="Yves Saint Laurent Y Le Parfum">
                 </div>
                 <div class="card-content">
                     <div>
-                        <div class="card-title">Yves Saint Laurent Y Le Parfum</div>
-                        <div class="price-tag">1,200 - 1,500 درهم</div>
+                        <h2 class="card-title">Yves Saint Laurent Y Le Parfum</h2>
+                        <p class="card-desc">العطر الذي يعيد كتابة قواعد الجاذبية والرجولة العصرية المركزة.</p>
                     </div>
-                    <a href="ysl.html" class="btn">استكشف التفاصيل والقصة</a>
+                    <div class="card-footer">
+                        <span class="price">40 درهم</span>
+                        <a href="ysl.html" class="details-btn">التفاصيل</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- 4. جان بول غوتييه لي بارفان -->
+            <!-- عطر 3: Dior Sauvage -->
             <div class="card">
-                <div class="img-box">
+                <div class="card-img">
+                    <img src="Connor cobalt.jpg" alt="Dior Sauvage Eau Forte">
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h2 class="card-title">Dior Sauvage Eau Forte</h2>
+                        <p class="card-desc">قوة الطبيعة الخام مستوحاة من انتعاش المياه وخشونة الصخور.</p>
+                    </div>
+                    <div class="card-footer">
+                        <span class="price">50 درهم</span>
+                        <a href="sauvage.html" class="details-btn">التفاصيل</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عطر 4: Gaultier Le Male Le Parfum -->
+            <div class="card">
+                <div class="card-img">
                     <img src="Jean Paul Gaultier Le Male Le Parfum Eau de Parfum Intense (Men) _ Nordstrom.jpg" alt="Jean Paul Gaultier Le Male Le Parfum">
                 </div>
                 <div class="card-content">
                     <div>
-                        <div class="card-title">Jean Paul Gaultier Le Male Le Parfum</div>
-                        <div class="price-tag">1,200 - 1,500 درهم</div>
+                        <h2 class="card-title">Jean Paul Gaultier Le Male Le Parfum</h2>
+                        <p class="card-desc">هيبة القبطان بروح عصرية فاخرة وخطوط ذهبية ملكية.</p>
                     </div>
-                    <a href="gaultier-leparfum.html" class="btn">استكشف التفاصيل والقصة</a>
+                    <div class="card-footer">
+                        <span class="price">50 درهم</span>
+                        <a href="gaultier-leparfum.html" class="details-btn">التفاصيل</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- 5. جان بول غوتييه (الإصدار الأسود الخطوط) -->
+            <!-- عطر 5: Gaultier Black Edition -->
             <div class="card">
-                <div class="img-box">
-                    <img src="921126930049269613.jpg" alt="Jean Paul Gaultier Le Male Black Edition">
+                <div class="card-img">
+                    <img src="921126930049269613.jpg" alt="Jean Paul Gaultier Black Edition">
                 </div>
                 <div class="card-content">
                     <div>
-                        <div class="card-title">Jean Paul Gaultier Le Male (الإصدار الأسود)</div>
-                        <div class="price-tag">1,000 - 1,300 درهم</div>
+                        <h2 class="card-title">Jean Paul Gaultier (الإصدار الأسود)</h2>
+                        <p class="card-desc">الغموض المطلق في زجاجة داكنة تأسر الحواس والأناقة الليلية.</p>
                     </div>
-                    <a href="gaultier-black.html" class="btn">استكشف التفاصيل والقصة</a>
+                    <div class="card-footer">
+                        <span class="price">35 درهم</span>
+                        <a href="gaultier-black.html" class="details-btn">التفاصيل</a>
+                    </div>
                 </div>
             </div>
 
-            <!-- 6. جان بول غوتييه الكلاسيكي -->
+            <!-- عطر 6: Gaultier Classic -->
             <div class="card">
-                <div class="img-box">
-                    <img src="Jean Paul Gaultier 'Le Male' Spray (Men) _ Nordstrom.jpg" alt="Jean Paul Gaultier Le Male Classic">
+                <div class="card-img">
+                    <img src="Jean Paul Gaultier 'Le Male' Spray (Men) _ Nordstrom.jpg" alt="Jean Paul Gaultier Classic">
                 </div>
                 <div class="card-content">
                     <div>
-                        <div class="card-title">Jean Paul Gaultier Le Male Classic</div>
-                        <div class="price-tag">950 - 1,200 درهم</div>
+                        <h2 class="card-title">Jean Paul Gaultier (النسخة الكلاسيكية)</h2>
+                        <p class="card-desc">الأيقونة الخالدة التي غيرت مفهوم العطور الرجالية بانتعاش جريء.</p>
                     </div>
-                    <a href="gaultier-classic.html" class="btn">استكشف التفاصيل والقصة</a>
+                    <div class="card-footer">
+                        <span class="price">30 درهم</span>
+                        <a href="gaultier-classic.html" class="details-btn">التفاصيل</a>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 
     <footer>
-        <h3>Velvet Aura - Luxury Perfumes</h3>
-        <p>جميع الحقوق محفوظة للموقع الملكي الفاخر</p>
-        <p>للتواصل المباشر وحجز الطلبات حصرياً عبر البريد الإلكتروني الخاص بك:</p>
-        <p style="color: var(--accent-gold); font-weight: bold; font-size: 1.1rem;">saadsaadwhithe@gmail.com</p>
+        <p>Velvet Aura © 2026 - جميع الحقوق محفوظة</p>
     </footer>
 
 </body>
